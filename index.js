@@ -13,7 +13,7 @@ const _ = require('underscore')
 
 // basic application root route
 app.get('/', (req, res) => {
-	fun_sample()
+	fun_arrayutility()
 	res.send('Hello World!')
 })
 
@@ -125,6 +125,22 @@ function fun_groupby() {
 function fun_sample() {
 	console.log(_.sample([1,2,3,4,5,10]))
 	console.log(_.sample([1,2,3,4,5,10],2))
+}
+
+
+
+//all array functions in underscore
+
+
+function fun_arrayutility() {
+
+	var a = [1,2,3,4,5,6,7,8]
+	console.log(_.first(a,[4]))
+	console.log(_.initial(a))
+	console.log(_.last(a))
+	console.log(_.rest(a,1))
+
+
 }
 
 
